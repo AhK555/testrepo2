@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9926EF9-E9AE-4E98-BC5A-473664F65111}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CadMatePipe</RootNamespace>
+    <AssemblyName>CadMatePipe</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CadMatePipeScheduling, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Abtin\References\CADmate\CadMatePipeScheduling.dll</HintPath>
+    </Reference>
+    <Reference Include="GcCoreMgd">
+      <HintPath>Z:\Abtin\References\CADmate\GcCoreMgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GcDbMgd">
+      <HintPath>Z:\Abtin\References\CADmate\GcDbMgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GcDbMgdBrep">
+      <HintPath>Z:\Abtin\References\CADmate\GcDbMgdBrep.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GcMgd">
+      <HintPath>Z:\Abtin\References\CADmate\GcMgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GeometryExtensionsR20, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\Abtin\References\CADmate\GeometryExtensionsR20.dll</HintPath>
+    </Reference>
+    <Reference Include="GrxCAD.Interop">
+      <HintPath>Z:\Abtin\References\CADmate\GrxCAD.Interop.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NSVLIBConstants">
+      <HintPath>Z:\Abtin\References\CADmate\NSVLIBConstants.dll</HintPath>
+    </Reference>
+    <Reference Include="NSVLIBInitializeCadMate">
+      <HintPath>Z:\Abtin\References\CADmate\NSVLIBInitializeCadMate.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QuikGraph">
+      <HintPath>Z:\Abtin\References\CADmate\QuikGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttributeUtils.cs" />
+    <Compile Include="BahraniUtilities.cs" />
+    <Compile Include="BitmapGenerator.cs" />
+    <Compile Include="BlockDefs.cs" />
+    <Compile Include="BlockInsertJig.cs" />
+    <Compile Include="BlockUtils.cs" />
+    <Compile Include="BuldgeUtils.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="Check.cs" />
+    <Compile Include="CheckFile.cs" />
+    <Compile Include="CommandClass.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="Connections\ConnectionPromptJig.cs" />
+    <Compile Include="Connections\Interaces\ConnectionPipeData.cs" />
+    <Compile Include="Connections\Interaces\FractionParser.cs" />
+    <Compile Include="Connections\Interaces\IConnection.cs" />
+    <Compile Include="Connections\Interaces\IConnectionList.cs" />
+    <Compile Include="Connections\Interaces\IConnValidator.cs" />
+    <Compile Include="Connections\Interaces\IInvalidAction.cs" />
+    <Compile Include="Connections\Interaces\IPipe.cs" />
+    <Compile Include="Connections\Interaces\IValidate.cs" />
+    <Compile Include="Connections\ReducerValidator.cs" />
+    <Compile Include="Connections\ThreadedReducer.cs" />
+    <Compile Include="CrossSymbol.cs" />
+    <Compile Include="DatabaseUtils.cs" />
+    <Compile Include="DBDictionaryExtension.cs" />
+    <Compile Include="DOT.cs" />
+    <Compile Include="DrawPipe\CrossPipeSymbol.cs" />
+    <Compile Include="DrawPipe\CustomBlockSelector.cs" />
+    <Compile Include="DrawPipe\DrawPipeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrawPipe\DrawPipeForm.designer.cs">
+      <DependentUpon>DrawPipeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrawPipe\FindMostIntersectingPoint.cs" />
+    <Compile Include="DrawPipe\JigPipe.cs" />
+    <Compile Include="DrawPipe\PipeCFactor.cs" />
+    <Compile Include="DrawPipe\PipeCutter.cs" />
+    <Compile Include="DrawPipe\PipeVisualizer.cs" />
+    <Compile Include="DrawPipe\PretyPipe.cs" />
+    <Compile Include="DrawPipe\SuppressOsnapOverrule.cs" />
+    <Compile Include="DrawPipe\SymbolUtils.cs" />
+    <Compile Include="DrawPipe\TopBottomStraightCut.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FilterSelection.cs" />
+    <Compile Include="Fonts.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inputData.cs" />
+    <Compile Include="InsertPipeConnection\ConnectionType.cs" />
+    <Compile Include="LayerUtils.cs" />
+    <Compile Include="LocalUtils.cs" />
+    <Compile Include="MaterialEnum.cs" />
+    <Compile Include="ObjectsUtils.cs" />
+    <Compile Include="PipeDiameterTable.cs" />
+    <Compile Include="PipeSizer.cs" />
+    <Compile Include="PipeSize\PipeSizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PipeSize\PipeSizeForm.designer.cs">
+      <DependentUpon>PipeSizeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointsUtils.cs" />
+    <Compile Include="PreviousSizeBlocks.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenSizeUtils.cs" />
+    <Compile Include="XDataUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DrawPipe\DrawPipeForm.resx">
+      <DependentUpon>DrawPipeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PipeSize\PipeSizeForm.resx">
+      <DependentUpon>PipeSizeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\0.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\135.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\180.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\225.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\270.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\315.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="Z:\Abtin\References\CADmate\GcCoreMgd.dll" />
+    <Analyzer Include="Z:\Abtin\References\CADmate\GcDbMgd.dll" />
+    <Analyzer Include="Z:\Abtin\References\CADmate\GcDbMgdBrep.dll" />
+    <Analyzer Include="Z:\Abtin\References\CADmate\GcMgd.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
